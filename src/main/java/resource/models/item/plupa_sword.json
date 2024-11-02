@@ -1,0 +1,6 @@
+{
+  "parent": "item/sword",
+  "textures": {
+    "layer0": "textures/item/plupa_sword.png"
+  }
+}
