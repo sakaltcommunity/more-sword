@@ -4,7 +4,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.item.Items; // Itemsをインポートする必要があります
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemGroup;
 
 public class ModItems {
     public static final Item GLASS_SWORD = registerSword("glass_sword", 3, 20, Items.GLASS); // ガラス剣
@@ -43,7 +44,7 @@ public class ModItems {
         };
 
         return Registry.register(Registry.ITEM, new Identifier("more_sword_mod", name),
-                new SwordItem(material, attackDamage, -2.4f, new Item.Settings().group(ItemGroup.COMBAT)));
+                new SwordItem(material, attackDamage, -2.4f, new Item.Settings().group(ItemGroup.COMBAT).maxCount(1)));
     }
 
     private static Item registerGreatSword(String name, int attackDamage, float attackSpeed, int durability, Item repairMaterial) {
@@ -75,6 +76,6 @@ public class ModItems {
         };
 
         return Registry.register(Registry.ITEM, new Identifier("more_sword_mod", name),
-                new SwordItem(material, attackDamage, attackSpeed, new Item.Settings().group(ItemGroup.COMBAT)));
+                new SwordItem(material, attackDamage, attackSpeed, new Item.Settings().group(ItemGroup.COMBAT).maxCount(1)));
     }
 }
