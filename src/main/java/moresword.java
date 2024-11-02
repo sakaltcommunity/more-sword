@@ -43,7 +43,7 @@ public class ModItems {
             }
         };
 
-        return Registry.register(Registry.ITEM, new Identifier("more_sword_mod", name),
+        return Registry.register(Registry.ITEM, new Identifier("moresword", name), // ネームスペースを修正
                 new SwordItem(material, attackDamage, -2.4f, new Item.Settings().group(ItemGroup.COMBAT).maxCount(1)));
     }
 
@@ -75,7 +75,7 @@ public class ModItems {
             }
         };
 
-        return Registry.register(Registry.ITEM, new Identifier("more_sword_mod", name),
+        return Registry.register(Registry.ITEM, new Identifier("moresword", name), // ネームスペースを修正
                 new SwordItem(material, attackDamage, attackSpeed, new Item.Settings().group(ItemGroup.COMBAT).maxCount(1)));
     }
 }
